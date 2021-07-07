@@ -1,14 +1,19 @@
 const int  echoPin = 2;
 const int trigPin = 3;
+const int LED = 13;
+
+
 
 
 double Duration = 0; //受信した間隔
 double Distance = 0; //距離
+int Distance-output = 20;
 
 void setup() {
 Serial.begin( 9600 );
-pinMode( echoPin, INPUT );
+pinMode( echoPin, INPUT ); 
 pinMode( trigPin, OUTPUT );
+pinMode(LED,OUTPUT);
 }
 
 
@@ -30,6 +35,12 @@ void loop() {
     Serial.println(" cm");
   }
 
+  if(Distance < Distance-output){
+    digitalWrite(LED,HIGH);
+  }
+  else{
+    digitalWrite(LED,LOW);
+  }
   
-  delay(500);
+  delay(100);
 }
