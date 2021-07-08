@@ -14,6 +14,8 @@ Serial.begin( 9600 );
 pinMode( echoPin, INPUT ); 
 pinMode( trigPin, OUTPUT );
 pinMode(LED,OUTPUT);
+
+Serial.println("Let's start!");
 }
 
 
